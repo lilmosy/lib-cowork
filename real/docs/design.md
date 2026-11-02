@@ -411,7 +411,7 @@ LLM은 **후보 하나당 점수 하나**를 낸다(`ShelfFitAssessment` — fit
 ```
 lib_copilot/
 ├── real/                         ── 실제 구현 ──
-│   ├── CLAUDE.md · AGENTS.md · README.md
+│   ├── README.md
 │   ├── app.py                    사서용 Streamlit 화면
 │   ├── run.py                    도서 한 권 실행 CLI
 │   ├── src/

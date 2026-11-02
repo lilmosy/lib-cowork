@@ -12,7 +12,7 @@ DDC 분류기호를 **voting(대학 수)** 으로 센다. 이 득표는 *분류 
   - 서강대(=본교)는 voting에서 **항상 제외**한다. 자기 답을 종합서지에서 베끼면
     순환이다(design.md §8). config.HOME_LIBRARY_KEY로 판별.
 
-**KDC 제외:** 서강은 DDC관. KDC는 DDC로 1:1 변환이 안 되므로 세지 않는다(AGENTS.md).
+**KDC 제외:** 서강은 DDC관. KDC는 DDC로 1:1 변환이 안 되므로 세지 않는다.
 """
 
 from __future__ import annotations

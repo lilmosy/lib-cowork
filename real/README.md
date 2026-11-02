@@ -298,7 +298,7 @@ output/<회차>.json           케이스별 상세·프롬프트 trace
 
 ```text
 real/
-├── README.md · CLAUDE.md · AGENTS.md
+├── README.md
 ├── app.py · run.py · requirements.txt · .env.example
 ├── src/                    실제 파이프라인 라이브러리
 ├── prompts/                최종 운영 프롬프트 2개

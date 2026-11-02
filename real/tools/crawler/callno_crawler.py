@@ -214,7 +214,7 @@ def crawl() -> tuple[list[dict], list[dict]]:
         if truncated:
             print(f"  ⚠️ 잘림: 총 {total_in_catalog}건 중 {collected_here}건만 수집 "
                   f"(-{total_in_catalog - collected_here})")
-        # 중간 저장: 번호 하나 끝날 때마다 덤프(도중에 죽어도 진행분 보존, AGENTS.md 크롤 규약)
+        # 중간 저장: 번호 하나 끝날 때마다 덤프(도중에 죽어도 진행분 보존)
         save_json(records)
         save_coverage(coverage)
 

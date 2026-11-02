@@ -1,6 +1,6 @@
 """본교 장서(서강 로욜라도서관) 저장소 접근의 유일한 창구. (구 db.py)
 
-**불변식(AGENTS.md):** 저장소 접근 방식은 이 파일 밖으로 나가지 않는다.
+**불변식:** 저장소 접근 방식은 이 파일 밖으로 나가지 않는다.
 밖으로는 `schema.py`의 CollectionBook만. → 저장소를 갈아끼워도 부르는 쪽 불변.
 
 담는 것 = 사서 업무 절차:
@@ -86,7 +86,7 @@ _LANG = {"kor": "한국어", "eng": "영어", "jpn": "일본어", "chi": "중국
 
 @lru_cache(maxsize=1)
 def _conn() -> sqlite3.Connection:
-    """읽기 전용 커넥션 하나. 데이터를 메모리에 올리지 않는다(CLAUDE.md 규약 4)."""
+    """읽기 전용 커넥션 하나. 데이터를 메모리에 올리지 않는다."""
     if not COLLECTION_DB.exists():
         raise FileNotFoundError(
             f"본교 장서 DB가 없습니다: {COLLECTION_DB}\n"

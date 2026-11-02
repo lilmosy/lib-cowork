@@ -71,3 +71,7 @@ real/runs/*.jsonl
 **/__pycache__/
 **/.DS_Store
 .DS_Store
+
+# 개인 작업용 에이전트 지시 파일
+CLAUDE.md
+AGENTS.md
