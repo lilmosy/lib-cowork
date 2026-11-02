@@ -90,7 +90,7 @@ def _conn() -> sqlite3.Connection:
     if not COLLECTION_DB.exists():
         raise FileNotFoundError(
             f"본교 장서 DB가 없습니다: {COLLECTION_DB}\n"
-            "  드라이브에서 sogang_db_final.db를 받아 data/ 에 넣어주세요 (커밋 대상 아님)."
+            "  sogang_db_final.db를 data/ 에 넣어주세요 (데이터는 요청 시 제공, 커밋 대상 아님)."
         )
     c = sqlite3.connect(f"file:{COLLECTION_DB}?mode=ro", uri=True, check_same_thread=False)
     c.row_factory = sqlite3.Row
@@ -305,7 +305,7 @@ def find_inheritance(book: BookInput,
 
     holdout으로 '그 책 자신'은 제외한다(레코드 ID로 판별, 평가 누출 방지).
 
-    ⚠️ 두 정렬표(인덱스)는 **드라이브 배포본에 이미 들어 있다.** 없어도 동작은 같다
+    ⚠️ 두 정렬표(인덱스)는 **배포 DB에 이미 들어 있다.** 없어도 동작은 같다
        (3ms → 4.7초로 느려질 뿐). 직접 만들려면 아래를 sqlite3에 그대로 붙인다:
 
            CREATE INDEX IF NOT EXISTS ix_852h  ON books(marc_852h);
